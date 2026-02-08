@@ -5,6 +5,15 @@ from pathlib import Path
 from utils import hide_streamlit_style
 
 hide_streamlit_style()
+hide_streamlit_style = """
+    <style>
+    /* Hide GitHub and Fork icons in Streamlit Cloud header */
+    [data-testid="stToolbar"] {
+        display: none !important;
+    }
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 st.title("📁 Folder Organizer")
 st.write("Once downloaded and extracted all the files from different sources, you need to simply pick files and organise them into individual folder. This tool will help you accomplish your goal to do so, without requiring much maual work.")

@@ -6,6 +6,15 @@ from io import BytesIO
 from utils import hide_streamlit_style
 
 hide_streamlit_style()
+hide_streamlit_style = """
+    <style>
+    /* Hide GitHub and Fork icons in Streamlit Cloud header */
+    [data-testid="stToolbar"] {
+        display: none !important;
+    }
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 st.title("🕒 CSV Timestamp Cleaner & Merger")
 st.write("Helps to convert Time from one zone to another")

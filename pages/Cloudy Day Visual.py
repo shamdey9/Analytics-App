@@ -4,6 +4,15 @@ import plotly.express as px
 from utils import hide_streamlit_style
 
 hide_streamlit_style()
+hide_streamlit_style = """
+    <style>
+    /* Hide GitHub and Fork icons in Streamlit Cloud header */
+    [data-testid="stToolbar"] {
+        display: none !important;
+    }
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 st.title("Interactive Line Plot Tool (with multiple slicers & line styles)")
 st.write("Visualise data for various dates to find sunny dates for analysis.")
