@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 from io import BytesIO
+from utils import hide_streamlit_style
+
+hide_streamlit_style()
 
 st.title("🔄 Unpivot Excel Columns Safely")
 

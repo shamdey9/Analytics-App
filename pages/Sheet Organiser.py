@@ -2,6 +2,9 @@ import streamlit as st
 import os
 import pandas as pd
 import time
+from utils import hide_streamlit_style
+
+hide_streamlit_style()
 
 st.title("📁 Excel Sheet Organizer")
 st.write("Organise your sheets in a file into seperate Excel files. Help in case more data comes in and you want to merge them into one.")

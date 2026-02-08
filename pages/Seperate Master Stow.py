@@ -3,6 +3,9 @@ import pandas as pd
 import os
 import time
   # Ensure stow.py has this function
+from utils import hide_streamlit_style
+
+hide_streamlit_style()
 
 st.set_page_config(page_title="CSV Fission Tool", layout="centered")
 

@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from utils import hide_streamlit_style
+
+hide_streamlit_style()
 
 st.title("Interactive Line Plot Tool (with multiple slicers & line styles)")
 st.write("Visualise data for various dates to find sunny dates for analysis.")

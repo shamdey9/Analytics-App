@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+from utils import hide_streamlit_style
+
+hide_streamlit_style()
 
 st.title("Uniform Nomenclature")
 st.write("Data from various sources although containing same entity might have various name. To identify all of the different kinds here you unify all possible names to be used to make nomenclature unifrom across all different files.")

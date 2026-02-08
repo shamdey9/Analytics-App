@@ -2,6 +2,9 @@ import streamlit as st
 import os
 import shutil
 from pathlib import Path
+from utils import hide_streamlit_style
+
+hide_streamlit_style()
 
 st.title("📁 Folder Organizer")
 st.write("Once downloaded and extracted all the files from different sources, you need to simply pick files and organise them into individual folder. This tool will help you accomplish your goal to do so, without requiring much maual work.")

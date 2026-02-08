@@ -5,6 +5,9 @@ import os
 import pytz
 from datetime import datetime
 import time
+from utils import hide_streamlit_style
+
+hide_streamlit_style()
 
 # Utility Functions
 def list_excel_csv_files(folder):

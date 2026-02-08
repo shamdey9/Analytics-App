@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 import io
+from utils import hide_streamlit_style
+
+hide_streamlit_style()
 
 st.title("DC Capacity and Power File Processor (.xlsx)")
 st.write("Add DC capacity column")

@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 import os
+from utils import hide_streamlit_style
+
+hide_streamlit_style()
 
 st.title("📊 Excel Date Extractor and Cell Replacer")
 st.write("Get Date column added to your excel file")

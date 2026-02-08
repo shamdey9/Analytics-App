@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 from io import BytesIO
+from utils import hide_streamlit_style
+
+hide_streamlit_style()
 
 st.title("📅 Merge Date and Time Columns into Timestamp Columns")
 st.write("Add Timestamp column based on date and time column")

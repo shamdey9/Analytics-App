@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+from utils import hide_streamlit_style
+
+hide_streamlit_style()
 
 st.title("📊Faulty Node Identfier")
 st.write("Identfy faulty Nodes and the difference observed for the timeline of data")

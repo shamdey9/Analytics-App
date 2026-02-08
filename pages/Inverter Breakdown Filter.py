@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+from utils import hide_streamlit_style
+
+hide_streamlit_style()
 
 st.title("Filter Power Data Based on Inverter Breakdown Ranges")
 st.write("Clean excel file to remove timestamps with inverter breakdown.")

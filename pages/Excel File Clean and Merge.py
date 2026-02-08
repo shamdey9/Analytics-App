@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 from pathlib import Path
+from utils import hide_streamlit_style
+
+hide_streamlit_style()
 
 st.title("📁 Excel Preprocessor & Merger")
 st.write("Getting Data from client with unnecessary headers? Multiple excel files? Clean and Combine these excel files into one excel file.")

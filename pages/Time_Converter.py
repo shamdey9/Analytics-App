@@ -3,6 +3,9 @@ import pandas as pd
 import pytz
 import os
 from io import BytesIO
+from utils import hide_streamlit_style
+
+hide_streamlit_style()
 
 st.title("🕒 CSV Timestamp Cleaner & Merger")
 st.write("Helps to convert Time from one zone to another")

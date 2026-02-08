@@ -5,6 +5,9 @@ import os
 from datetime import datetime, timedelta
 import pytz
 
+from utils import hide_streamlit_style
+
+hide_streamlit_style()
 
 st.title("📊 WeatherSmart Processor")
 st.write("Help preprocess the Weathersmart Activation CSV file to unify it with Stow event file,")

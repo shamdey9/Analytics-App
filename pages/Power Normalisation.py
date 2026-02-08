@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 import numpy as np   # ✅ for safe division
+from utils import hide_streamlit_style
+
+hide_streamlit_style()
 
 st.title("Data Normalisation")
 st.write("Normalise Power generation data with DC Capacity, GHI AND POA in few clicks.")

@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+from utils import hide_streamlit_style
+
+hide_streamlit_style()
 
 st.title("Tracking Summary Tool")
 

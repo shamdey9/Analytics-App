@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+from utils import hide_streamlit_style
+
+hide_streamlit_style()
 
 st.title("Date & Time Column Enhancer")
 st.write("Helps to expand time and dat column into month, year,day, hour and minute.")

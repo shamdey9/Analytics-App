@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import numpy as np
+from utils import hide_streamlit_style
+
+hide_streamlit_style()
 
 # ---------------------------
 # 🧪 1. Upload Dataset
