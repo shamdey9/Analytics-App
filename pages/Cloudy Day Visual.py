@@ -35,6 +35,8 @@ if uploaded_file is not None:
     df = load_file(uploaded_file)
     # ✅ Remove duplicate columns
     df = df.loc[:, ~df.columns.duplicated()]
+    df = df.drop_duplicates()
+
 
     # ✅ Format Date and Time columns if present
     if "Date" in df.columns:
@@ -87,5 +89,6 @@ if uploaded_file is not None:
             line_dash=line_type_col,     # different line styles based on line type column
             title="Interactive Line Plot"
         )
+
 
         st.plotly_chart(fig, use_container_width=True)
