@@ -21,7 +21,10 @@ st.write("Visualise data for various dates to find sunny dates for analysis.")
 def load_file(uploaded_file):
     """Read CSV or Excel file with caching."""
     if uploaded_file.name.lower().endswith(".csv"):
-        return pd.read_csv(uploaded_file)
+        try:
+          return pd.read_csv(uploaded_file)
+        except:
+            return pd.read_excel(uploaded_file)
     else:
         return pd.read_excel(uploaded_file)
 

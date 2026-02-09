@@ -29,7 +29,10 @@ st.title("Excel Invereter Generation-Sheet Merger & Interactive Plot")
 st.write("Visualise multiple inverter data")
 @st.cache_data
 def load_excel(uploaded_file):
-    return pd.read_excel(uploaded_file, sheet_name=None)
+    try:
+      return pd.read_excel(uploaded_file, sheet_name=None)
+    except:
+      return pd.read_csv(uploaded_file)
 
 @st.cache_data
 def merge_sheets(all_sheets, merge_col):
