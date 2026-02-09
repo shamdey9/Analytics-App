@@ -33,6 +33,14 @@ uploaded_file = st.file_uploader("Upload a CSV or Excel file", type=["csv", "xls
 
 if uploaded_file is not None:
     df = load_file(uploaded_file)
+    # ✅ Remove duplicate columns
+    df = df.loc[:, ~df.columns.duplicated()]
+
+    # ✅ Format Date and Time columns if present
+    if "Date" in df.columns:
+        df["Date"] = pd.to_datetime(df["Date"], errors="coerce").dt.strftime("%d-%m-%Y")
+    if "Time" in df.columns:
+        df["Time"] = pd.to_datetime(df["Time"], errors="coerce").dt.strftime("%H:%M:%S")
 
     st.subheader("Preview of Uploaded File")
     st.dataframe(df.head())
